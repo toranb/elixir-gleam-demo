@@ -4,6 +4,7 @@ defmodule Example.MixProject do
   def project do
     [
       app: :example,
+      apps: [:demo],
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -33,6 +34,7 @@ defmodule Example.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:demo, path: "../demo"},
       {:phoenix, "~> 1.5.4"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
